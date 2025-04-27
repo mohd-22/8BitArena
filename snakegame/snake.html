@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../optios.css">
+    <link rel="stylesheet" href="snake.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="../indx.html">
+            <img src="../imgs/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </a>
+        <a href="../lobby/lobby.html">
+            <img src="../imgs/arrow_back_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </a>
+        <img onclick="ShowOptions()" src="../imgs/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    </header>
+
+    <main id="con">
+        <h1>Snake Game</h1>
+        <div class="gameboard">
+            <canvas id="board" height="500" width="500px"></canvas>
+        </div>
+        <div class="playagain">
+            <button id="playagain" onclick="PlayAgain()">Play Again</button>
+        </div>
+        <div class="scoreboard">
+            <h2>Score: <span id="score">0</span></h2>
+
+
+    </main>
+
+    <div class="option hidden" id="op">
+        <div class="music">
+
+            Music: <input type="checkbox" class="toggle-music" checked><br>
+        </div>
+        <div class="sound">
+
+            Sound: <input type="checkbox" class="toggle-sound" checked><br>
+        </div>
+        <button onclick="HideOptions()">Close</button>
+    </div>
+    <div class="start">
+        <p>Press any of those to Start</p>
+        <img src="snakeImg/buttons.png" alt="">
+    </div>
+    <script src="snake.js"></script>
+    <script src="../j.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Press Start 2P", cursive;
+    /* background-image: url(../imgs/lobbyBACKground.jpg); */
+    background-color: #5f176e;
+    backdrop-filter: blur(5px);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(../joystix\ monospace.otf);
+}
+
+header img {
+    width: 40px;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.cards {
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 10%;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px;
+    transition: transform 1000ms;
+    transform-style:preserve-3d;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.cardcontainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 600px;
+
+}
+
+
+.cards.rotated {
+    transform: rotateY(180deg);
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    backface-visibility: hidden;
+    position: absolute;
+    
+}
+.back{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: linear-gradient(#e66465, #9198e5);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10%;
+}
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 0, 0, 0.8); /* Semi-transparent black */
+    z-index: 9;
+    display: flex; /* Ensure content inside is centered */
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    align-items: center;
+    color: white; /* Text color for content inside */
+    font-size: 20px; /* Adjust font size */
+}
+.overlay span{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.overlay span:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+.over1,.over2{
+    text-align: center;
+}

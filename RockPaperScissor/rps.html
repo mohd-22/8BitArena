@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../optios.css">
+    <link rel="stylesheet" href="rps.css">
+</head>
+
+<body>
+    <header>
+        <a href="../indx.html">
+            <img src="../imgs/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </a>
+        <a href="../lobby/lobby.html">
+            <img src="../imgs/arrow_back_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </a>
+        <img onclick="ShowOptions()" src="../imgs/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    </header>
+    <main id="con">
+
+        <section class="title">
+            <h1>Rock Paper Scissor</h1>
+        </section>
+
+        <section class="battle-arena">
+            <p class="left">✊</p>
+            <span>vs</span>
+            <p class="right">✊</p>
+        </section>
+        <section class="choices">
+            <div class="rock">✊</div>
+            <div class="scissor">✌️</div>
+            <div class="paper">✋</div>
+        </section>
+        <section class="result-bored">
+            <div class="player"></div>
+            <div class="computer"></div>
+
+        </section>
+        <div class="overlay" id="ov">
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+            <span class="malik">Start</span>
+        </div>
+    </main>
+
+
+
+    <div class="option hidden" id="op">
+        <div class="music">
+
+            Music: <input type="checkbox" class="toggle-music" checked><br>
+        </div>
+        <div class="sound">
+
+            Sound: <input type="checkbox" class="toggle-sound" checked><br>
+        </div>
+        <button onclick="HideOptions()">Close</button>
+    </div>
+    </div>
+
+    <script src="rps.js"></script>
+    <script src="../j.js"></script>
+</body>
+
+</html>

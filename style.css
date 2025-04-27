@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(joystix\ monospace.otf);
+}
+
+body {
+    font-family: "Press Start 2P", cursive;
+    background-image: url(imgs/3179875.jpg);
+    backdrop-filter: blur(5px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+div {
+    text-align: center;
+}
+
+div p {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+.t1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    border-right: 0.15em solid black;
+    width: 0;
+    animation:
+        typing 2.5s steps(20, end) infinite,
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+}
+.hidden {
+    display: none;
+}
+.blur {
+    filter: blur(5px);
+    pointer-events: none; 
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; 
+}
+
+button {
+    font-family: "Press Start 2P", c ursive;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 5rem;
+    cursor: pointer;
+
+
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+}
+
+.option {
+    background-color: #20003f;
+    /* display: flex; */
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    /* z-index: 999; */
+    color: white;
+}

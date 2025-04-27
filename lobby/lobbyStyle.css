@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Press Start 2P", cursive;
+    background-image: url(../imgs/lobbyBACKground.jpg);
+    backdrop-filter: blur(5px);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+  
+    height: 100vh;
+   
+}
+header img{
+    width: 40px;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;;
+
+}
+.hidden {
+    display: none;
+}
+.blur {
+    filter: blur(5px);
+    pointer-events: none; 
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; 
+}
+.option {
+    background-color: #20003f;
+    /* display: flex; */
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    /* z-index: 999; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+
+
+   
+
+
+
+
+
+}
+button {
+    font-family: "Press Start 2P", c ursive;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 5rem;
+    cursor: pointer;
+    color: white;
+
+
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+}
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(../joystix\ monospace.otf);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    justify-items: center;
+        
+ 
+}
+.cell{
+    width: 400px;
+    height: 400px;
+    /* background-color: red; */
+    border: 2px solid white;
+    margin: 20px;
+    box-shadow: 0px 0px 14px 1px white;
+    transition: all 0.3s ease;
+    /* animation: ; */
+    position: relative;
+    border-radius: 10%;
+    margin-top: 60px;
+}
+.container .cell:nth-child(1) {
+    background-image: url("../imgs/TicTacTeo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.container .cell:nth-child(1)::before{
+    content: "Tic Tac Toe";
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.container .cell:nth-child(1)::after{
+    content: "MulitPlayer";
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;   
+}
+.container .cell:nth-child(1):hover::after{
+    display: block;
+   
+}
+
+.container .cell:nth-child(2)::after{
+    content: "Single Player";
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;   
+}
+.container .cell:nth-child(2):hover::after{
+    display: block;
+   
+}
+
+.container .cell:nth-child(3)::after{
+    content: "Single Player";
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;   
+}
+.container .cell:nth-child(3):hover::after{
+    display: block;
+   
+}
+
+.container .cell:nth-child(4)::after{
+    content: "Single Player";
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;   
+}
+.container .cell:nth-child(4):hover::after{
+    display: block;
+   
+}
+
+.container .cell:nth-child(5)::after{
+    content: "MulitPlayer";
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;   
+}
+.container .cell:nth-child(5):hover::after{
+    display: block;
+   
+}
+
+    
+
+.container .cell:nth-child(2) {
+    background-image: url("../imgs/cardGame.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.container .cell:nth-child(2)::before{
+    content: "Memory Card";
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgb(233, 57, 57);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.container .cell:nth-child(3) {
+    background-image: url("../imgs/e507e249-4078-42aa-babe-9e7dac68a244.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.container .cell:nth-child(3)::before{
+    content: "Rock Paper Scissor";
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color:gold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.container .cell:nth-child(4) {
+    background-image: url("../snakegame/snakeImg/_59b6d7ee-fcad-11e6-905d-7be79ae01fbf.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.container .cell:nth-child(4)::before{
+    content: "Snake Game";
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color:black;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.container .cell:nth-child(5) {
+    background-image: url("../imgs/apps.41929.13910108538401625.dfad4587-dfb3-4aa4-8bed-b5d2dd8fc79f.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 100%;
+
+}
+
+
+.container .cell:hover {
+  transform: scale(1.05);
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;        /* Single column layout */
+        grid-template-rows: repeat(6, auto); /* Six rows for single-column layout */
+    }
+
+    .cell {
+        width: 70%;                       /* Full width for small screens */
+    }
+}

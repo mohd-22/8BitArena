@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Press Start 2P", cursive;
+    background-image: url(imgs/download.jpeg);
+    /* background: linear-gradient(to bottom, #87CEEB, #FFB6C1); */
+    /* Gradient sky with blue and pink */
+    /* backdrop-filter: blur(5px); */
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+
+}
+
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(../joystix\ monospace.otf);
+}
+
+header img {
+    width: 40px;
+    margin: 20px 0 20px 20px;
+    cursor: pointer;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.butns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.butns img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity:1;
+
+}
+
+#game-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    width: 590px;
+    height: 490px;
+    border: 10px solid blue;
+    background-color: rgb(4, 4, 114);
+
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 5px solid blue;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    /* border: 2px solid white; */
+    margin: 3px;
+    /* transition: all 0.3s ease-in-out; */
+    /* border: 10px solid white; */
+    position: relative;
+}
+
+button {
+    display: block;
+}
+
+
+@keyframes fall {
+    0% {
+        transform: translateY(-600%);
+
+    }
+
+    80% {
+        transform: translateY(0);
+
+    }
+
+    90% {
+        transform: translateY(-50%);
+
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes gradientSlide {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7 {
+    position: relative;
+    height: 75px;
+}
+
+.col1::before,
+.col2::before,
+.col3::before,
+.col4::before,
+.col5::before,
+.col6::before,
+.col7::before {
+    content: "";
+    display: none;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: -120%;
+    left: 0;
+    /* display: block; */
+    /* z-index: 1; */
+}
+
+.ov {
+    background-color: #007eff;
+    height: 300px;
+    width: 400px;
+    border: 20px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.start {
+    display: flex;
+    text-align: center;
+    background-color: #007eff;
+    height: 300px;
+    width: 400px;
+    border: 20px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* opacity: 0.9; */
+}
+
+.col1:hover::before,
+.col2:hover::before,
+.col3:hover::before,
+.col4:hover::before,
+.col5:hover::before,
+.col6:hover::before,
+.col7:hover::before {
+    display: block;
+    opacity: .5;
+
+}
+
+.cell.falling {
+    animation: fall 1s ease-out;
+}
+
+.btn {
+    text-decoration: none;
+    border: 1px solid rgb(146, 148, 248);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(146, 148, 248, 0.4),
+            transparent);
+    animation: gradientSlide 2s 1;
+    /* Apply the animation */
+}
+
+.btn:hover:before {
+    left: 100%;
+}

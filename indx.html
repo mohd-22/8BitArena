@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8BitArena</title>
+    <link rel="stylesheet" href="csszero.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="j.js"></script>
+</head>
+
+<body>
+    <div class="content " id="con">
+        <p class="t1">Welcome to 8BitArena</p>
+        <p class="t2">Where you can play games and have fun</p>
+        <a href="lobby/lobby.html">
+            <button>
+                Start
+            </button>
+        </a>
+
+        <button onclick="ShowOptions()">options</button>
+    </div>
+    <div class="option hidden" id="op">
+        <div class="music">
+
+            Music: <input type="checkbox" onclick="Music()"><br>
+        </div>
+        <div class="sound">
+
+            Sound: <input type="checkbox" onclick="Sound()"><br>
+        </div>
+        <button onclick="HideOptions()">Close</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8BitArena</title>
+    <link rel="stylesheet" href="csszero.css">
+    <link rel="stylesheet" href="lobbyStyle.css">
+    <script src="j.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../indx.html">
+            <img src="imgs/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+        </a>
+
+        <img onclick="ShowOptions()" src="imgs/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="">
+    </header>
+    <div class="container" id="con">
+        
+        <a href="../TicTacTeo/TicTacToe.html" class="cell">
+            <div ></div>
+
+        </a>
+        <a href="../MemoryCard/cards.html" class="cell">
+            <div ></div>
+
+        </a>
+        <a href="../RockPaperScissor/rps.html" class="cell">
+            <div ></div>
+
+        </a>
+        <a href="../snakegame/snake.html" class="cell">
+            <div ></div>
+
+        </a>
+        <a href="../connecting4/connecting4.html" class="cell">
+            <div ></div>
+
+        </a>
+   
+
+        
+    </div>
+    <div class="option hidden" id="op">
+        <div class="music">
+
+            Music: <input type="checkbox" onclick="Music()"><br>
+        </div>
+        <div class="sound">
+
+            Sound: <input type="checkbox" onclick="Sound()"><br>
+        </div>
+        <button onclick="HideOptions()">Close</button>
+    </div>
+</body>
+
+</html>
